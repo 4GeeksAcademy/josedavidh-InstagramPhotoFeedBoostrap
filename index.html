@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="html, css, javascript, develop" />
+    <title>Bootstrap</title>
+    <style>
+      .roboto-unique {
+      font-family: "Roboto", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+      }
+    </style>
+    <!-- <style>
+      * {
+        border: 1px dashed red; /* BORRAR ESTA LINEA AL FINALIZAR EL PROYECTO */
+      }
+    </style> -->
+    <!-- link cdn fontawesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <!-- link to Google Fonts with Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <!-- link cdn boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="container-fluid border-0 p-0">
+        
+      <!-- navbar -->
+        <nav class="navbar bg-body-tertiary border-0" >
+          <div class="container-fluid">
+            <!-- <div class="border-0"> -->
+              <a class="navbar-brand P-1"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <!-- </div> -->
+            <div class="border-0">
+              <!-- Boton modal verde -->
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Create new post
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="captionInput" class="form-label">Caption:</label>
+                        <textarea class="form-control" id="captionInput" rows="3" placeholder="Add the caption of your post here"></textarea>
+                      </div>
+                      <div>
+                        <button type="button" class="btn btn-light border">
+                          <i class="fa-solid fa-camera"></i>
+                        </button>
+                        <button type="button" class="btn btn-light border">
+                          <i class="fa-solid fa-location-dot"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-success">Publish</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end boton modal verde -->
+
+              <!-- boton engranaje -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-secondary">
+                  <i class="fa-solid fa-gear"></i>
+                </button>
+                <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                  <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                </ul>
+              </div>
+              <!-- end boton engranaje -->
+            </div>
+          </div>
+        </nav>
+        <!-- end navbar -->
+
+        <!-- botones centrales -->
+          <ul class="nav nav-pills mb-3 justify-content-center mt-2" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                <i class="fa-solid fa-table-cells"></i>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                <i class="fa-solid fa-square"></i>
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            
+            <!-- Contenido del boton grid -->
+            <div class="tab-pane fade show active ml" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+              <div class="container-fluid d-flex justify-content-center">
+                <div class="row w-50">
+                  <div class="col-4 pb-1">
+                    <img src="https://picsum.photos/id/18/300"/>
+                  </div>
+                  <div class="col-4 pb-1">
+                    <img src="https://picsum.photos/id/19/300"/>
+                  </div>
+                  <div class="col-4 pb-1">
+                    <img src="https://picsum.photos/id/20/300"/>
+                  </div>
+                  <div class="col-4 pb-1">
+                    <img src="https://picsum.photos/id/28/300"/>
+                  </div>
+                  <div class="col-4 pb-1">
+                    <img src="https://picsum.photos/id/27/300"/>
+                  </div>
+                  <div class="col-4 pb-1">
+                    <img src="https://picsum.photos/id/23/300"/>
+                  </div>
+                  <div class="col-4 pb-1">
+                    <img src="https://picsum.photos/id/24/300"/>
+                  </div>
+                  <div class="col-4 pb-1">
+                    <img src="https://picsum.photos/id/25/300"/>
+                  </div>
+                  <div class="col-4 pb-1">
+                    <img src="https://picsum.photos/id/26/300"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Fin contenido del boton grid -->
+
+            <!-- Contenido del boton photo feed -->
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+              <div class="container-fluid d-flex justify-content-center mt-2">
+                <div class="row">
+                  <div class="col">
+                    <div class="card border-success mb-3" style="max-width: auto;">
+                        <div class="card-header bg-transparent border-success d-flex justify-content-between">
+                          <div>My Crazy dog Spark!</div>
+                          <div>06/26</div>
+                        </div>
+                        <div class="card-body text-success m-0 p-0">
+                            <img src="https://picsum.photos/id/20/500/400" />
+                        </div>
+                        <div class="card-footer bg-transparent border-success">
+                          <p>204 Likes</p>
+                          <p class="border">This is an example of a very good photo that you can post on Instagram</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Fin contenido del boton photo feed -->
+          </div>
+        <!-- end botones centrales -->
+
+    </div>
+    
+    <!-- Seccion de scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>
