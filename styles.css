@@ -1,0 +1,16 @@
+.nav-pills .nav-link {
+    color: gray;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.nav-pills .nav-link.active {
+    background-color: white;
+    color: blue;
+}
+
+.nav-pills .nav-link:focus {
+    outline: none;
+    background-color: transparent;
+    color: blue;
+}
